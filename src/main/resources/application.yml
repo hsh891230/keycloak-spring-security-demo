@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+keycloak:
+  realm: demo
+  auth-server-url: http://localhost:8080/auth/
+  # ssl-required: external
+  resource: demo-app
+  bearer-only: true   # api Request(X-Requested-With=XMLHttpRequest) or bearerOnly 인 경우 redirect X
+
+logging:
+  level:
+    org.springframework: trace
+    org.keycloak: trace
